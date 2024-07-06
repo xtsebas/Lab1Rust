@@ -1,0 +1,1 @@
+C:\Users\Sebastian\projects\hello_world\target\debug\hello_world.exe: C:\Users\Sebastian\projects\hello_world\src\bmp.rs C:\Users\Sebastian\projects\hello_world\src\framebuffer.rs C:\Users\Sebastian\projects\hello_world\src\line_impl.rs C:\Users\Sebastian\projects\hello_world\src\main.rs
