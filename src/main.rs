@@ -100,6 +100,13 @@ fn main() {
         Vec3::new(374.0, 302.0, 0.0),
     ];    
 
+    let vertices3 = vec![
+        Vec3::new(377.0, 249.0, 0.0),
+        Vec3::new(411.0, 197.0, 0.0),
+        Vec3::new(436.0, 249.0, 0.0),
+    ];
+
+
 
     // Define the colors
     let line_color1 = 0xFFFFFF;
@@ -107,14 +114,19 @@ fn main() {
 
     let line_color2 = 0xFFFFFF;
     let fill_color2 = 0x0000FF;
+    
+    let line_color3 = 0xFFFFFF;
+    let fill_color3 = 0xFF0000;
 
     // Draw a polygon using the defined vertices
     draw_polygon(&mut framebuffer, &vertices1, line_color1);
     draw_polygon(&mut framebuffer, &vertices2, line_color2);
+    draw_polygon(&mut framebuffer, &vertices3, line_color3);
 
     // Fill the polygon
     fill_polygon(&mut framebuffer, &vertices1, fill_color1);
     fill_polygon(&mut framebuffer, &vertices2, fill_color2);
+    fill_polygon(&mut framebuffer, &vertices3, fill_color3);
 
     // Save the framebuffer as a BMP file
     framebuffer.render_buffer("out.bmp");
