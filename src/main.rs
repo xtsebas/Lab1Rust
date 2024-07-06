@@ -80,7 +80,7 @@ fn main() {
     framebuffer.clear();
 
     // Define los vertices del poligono
-    let vertices = vec![
+    let vertices1 = vec![
         Vec3::new(165.0, 380.0, 0.0),
         Vec3::new(185.0, 360.0, 0.0),
         Vec3::new(180.0, 330.0, 0.0),
@@ -93,16 +93,28 @@ fn main() {
         Vec3::new(193.0, 383.0, 0.0),
     ];
 
+    let vertices2 = vec![
+        Vec3::new(321.0, 335.0, 0.0),
+        Vec3::new(288.0, 286.0, 0.0),
+        Vec3::new(339.0, 251.0, 0.0),
+        Vec3::new(374.0, 302.0, 0.0),
+    ];    
+
 
     // Define the colors
-    let line_color = 0xFFFFFF;
-    let fill_color = 0xFFFF00;
+    let line_color1 = 0xFFFFFF;
+    let fill_color1 = 0xFFFF00;
+
+    let line_color2 = 0xFFFFFF;
+    let fill_color2 = 0x0000FF;
 
     // Draw a polygon using the defined vertices
-    draw_polygon(&mut framebuffer, &vertices, line_color);
+    draw_polygon(&mut framebuffer, &vertices1, line_color1);
+    draw_polygon(&mut framebuffer, &vertices2, line_color2);
 
     // Fill the polygon
-    fill_polygon(&mut framebuffer, &vertices, fill_color);
+    fill_polygon(&mut framebuffer, &vertices1, fill_color1);
+    fill_polygon(&mut framebuffer, &vertices2, fill_color2);
 
     // Save the framebuffer as a BMP file
     framebuffer.render_buffer("out.bmp");
